@@ -16,6 +16,15 @@
                         <label for="operacao" class="form-label">OPERAÇÃO</label>
                         <input type="text" class="form-control" id="operacao" name="operacao" required/>
                     </div>
+                    <div class="col-md-12">
+                        <label for="email" class="form-label">EMAIL</label>
+                        <textarea type="text" class="form-control" id="email" name="email" rows="3"></textarea>
+                    </div>
+                    <div class="col-md-12">
+                        <label for="emailcopia" class="form-label">EMAIL COPIA</label>
+                        <textarea type="text" class="form-control" id="emailcopia" name="emailcopia" rows="3"></textarea>
+               </div>
+      
 
                 </div>
 

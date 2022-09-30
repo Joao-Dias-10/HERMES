@@ -84,7 +84,7 @@
 
                 <div id="espaco" class="d-grid gap-2 col-6 mx-auto">
 
-                    <button id="submit" type="submit" class="btn btn-dark"><b>ATUALIZAR</b></button>
+                    <button id="submit" type="submit" class="btn btn-warning"><b>ATUALIZAR</b></button>
 
                 </div>
                 <label></label>

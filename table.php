@@ -85,6 +85,16 @@
                         <div  style="overflow-x: scroll;" id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 <table class="table" id="table">
+                                <thead>
+                                        <tr>
+                                            <th style="text-align: center">ANO</th>
+                                            <th style="text-align: center">MES</th>
+                                            <th style="text-align: center">DATA</th>
+                                            <th style="text-align: center">GRUPO</th>
+                                            <th style="text-align: center">NOME</th>
+                                            <th style="text-align: center">EDITAR</th>
+                                        </tr>
+                                    </thead>
                                     <thead>
                                         <tr>
                                             <th style="text-align: center">ANO</th>
@@ -153,6 +163,8 @@
                                             </tr>
                                         <?php } ?>
                                     </tbody>
+ 
+                                  
 
                                 </table>
                             </div>

@@ -70,9 +70,14 @@ label {
 
 input{
 
-  text-transform: uppercase;
   box-shadow: rgb(78, 78, 78) 0 0 5px;
-  text-transform: uppercase;
+  
+}
+textarea{
+
+ 
+  box-shadow: rgb(78, 78, 78) 0 0 5px;
+ 
 
 }
 

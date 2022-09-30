@@ -14,13 +14,15 @@
     <?php
     $nome = $_POST['nome'];
     $operacao = $_POST['operacao'];
+    $email = $_POST['email'];
+    $emailcopia = $_POST['emailcopia'];
 
     if (isset($_POST['nome'])) {
 
         function grupo($operacao, $nome)
         {
             include "config.php";
-            $sql = "SELECT operacao FROM cadastrados WHERE operacao='$operacao' and nome='$nome'";
+            $sql = "SELECT operacao FROM cadastrados WHERE operacao='$operacao' and nome='$nome' ";
             $query = $mysqli->query($sql);
             $total = mysqli_num_rows($query);
 
@@ -31,11 +33,13 @@
 
             $nome = $_POST['nome'];
             $operacao = $_POST['operacao'];
+            $email = $_POST['email'];
+            $emailcopia = $_POST['emailcopia'];
             $variavel = "s";
 
             include "config.php";
 
-            $sql = "INSERT INTO cadastrados (nome,operacao,data_cadastro) VALUES ('$nome','$operacao',NOW())";
+            $sql = "INSERT INTO cadastrados (nome,operacao,email,email_copia,data_cadastro) VALUES ('$nome','$operacao','$email','$emailcopia',NOW())";
             $query = $mysqli->query($sql);
 
     ?>
@@ -54,13 +58,15 @@
         } else {
             $nome = $_POST['nome'];
             $operacao = $_POST['operacao'];
+            $email = $_POST['email'];
+            $emailcopia = $_POST['emailcopia'];
             $variavel = "s";
 
 
 
             include "config.php";
 
-            $sql = "UPDATE cadastrados SET  nome ='$nome', operacao ='$operacao', data_cadastro = NOW() WHERE  operacao IN ('$operacao') and nome IN ('$nome')";
+            $sql = "UPDATE cadastrados SET  nome ='$nome', operacao ='$operacao', email = '$email', email_ copia = '$emailcopia', data_cadastro = NOW()  WHERE  operacao IN ('$operacao') and nome IN ('$nome')";
             $query = mysqli_query($mysqli, $sql)
         ?>
             <script language='javascript'>

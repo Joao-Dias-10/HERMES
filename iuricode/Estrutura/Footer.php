@@ -14,14 +14,49 @@
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
   <script type="text/javascript">
-    //Codigo datatable
-    $(document).ready(function() {
-    $('#table').DataTable( {
+
+$(document).ready(function () {
+    $('#table').DataTable({
+        initComplete: function () {
+            this.api()
+                .columns()
+                .every(function () {
+                    var column = this;
+                    var select = $('<select><option value=""></option></select>')
+                        .appendTo($(column.header()).empty())
+                        .on('change', function () {
+                            var val = $.fn.dataTable.util.escapeRegex($(this).val());
+ 
+                            column.search(val ? '^' + val + '$' : '', true, false).draw();
+                        });
+ 
+                    column
+                        .data()
+                        .unique()
+                        .sort()
+                        .each(function (d, j) {
+                            select.append('<option value="' + d + '">' + d + '</option>');
+                        });
+                });
+        },
         "language": {
             "url": "//cdn.datatables.net/plug-ins/1.12.1/i18n/pt-BR.json"
         }
-    } );
-} );
+        
+    });
+});
+
+
+$(document).ready(function () {
+    $('#tabl').DataTable({
+
+        "language": {
+            "url": "//cdn.datatables.net/plug-ins/1.12.1/i18n/pt-BR.json"
+        }
+        
+    });
+});
+
   </script>
 </body>
 </html>
